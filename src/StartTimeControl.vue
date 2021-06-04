@@ -1,24 +1,22 @@
 <template functional>
   <div
     v-on:click="listeners.showChild()"
-    class="drop-down pointer"
+    class="drop-down"
     :class="{ active: props.isVisible }"
   >
     <slot></slot><i class="arrow down"></i>
     <div style="position: relative">
       <div class="control-wrapper">
-        <transition name="slide">
-          <ul v-if="props.isVisible">
-            <li
-              @click.stop="listeners.updated(item)"
-              v-for="item in props.items"
-              :key="item"
-              :class="{ selected: item === props.selected }"
-            >
-              {{ item }}
-            </li>
-          </ul>
-        </transition>
+        <ul v-if="props.isVisible">
+          <li
+            @click.stop="listeners.updated(item)"
+            v-for="item in props.items"
+            :key="item"
+            :class="{ selected: item === props.selected }"
+          >
+            {{ item }}
+          </li>
+        </ul>
       </div>
     </div>
   </div>
@@ -87,11 +85,9 @@ li {
 li.selected {
   background-color: #eee;
 }
-
 li:hover {
   background-color: #eee;
 }
-
 .arrow {
   border: solid #aaa;
   border-width: 0 2px 2px 0;

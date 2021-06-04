@@ -1,10 +1,16 @@
 # Timeselector
 A simple Vue component that allows you to select a time.
-It is built as a renderless component, with 1 view included for demonstration purposes
+It is built as a renderless component, with 1 view included for demonstration purposes.
+
+
+The view and an associated control can be found at `/docs/src/.vuepress/components`
+
+A demo can be found by running `npm run docs:dev`, and one will be hosted online very shortly.
+
 
 
 ## Installation
- With npm or yarn
+With npm or yarn - Currently not published.
 ```
 yarn add timeselector
 npm install timeselector
@@ -14,7 +20,7 @@ npm install timeselector
 As this is a renderless component, there is complete flexibility to build your own view and controls.
 Or feel free to use the provided one.
 
- Creating your own view
+Creating your own view
 You will need to access all of the exposed slots from the Component. You can see all the slots in the documentation here.
 From there you can do whatever you like. Please take a look at the TimeSelector.vue for a thorough example
 
